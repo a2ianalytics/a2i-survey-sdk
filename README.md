@@ -18,7 +18,7 @@ Note: do not add the jitpack.io repository under `buildscript`
 
 ```
 dependencies {
-    compile 'com.github.mandarsphinx:a2i-survey-library:v1.0'
+    compile 'com.github.a2ianalytics:a2i-survey-sdk:v1.0'
 }
 ```
 

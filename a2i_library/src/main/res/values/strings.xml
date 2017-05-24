@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">A2I_Library</string>
+    <string name="a2i_refresh">Refresh</string>
+    <string name="a2i_no_internet_connection">No internet connection</string>
+    <string name="a2i_action_give_feedback">Give Feedback</string>
+    <string name="a2i_action_not_now">Not Now</string>
+    <string name="a2i_prompt_message_text">Take our quick feedback survey and let us know how we\'re doing.</string>
+    <string name="a2i_survey_closed">The collector for this survey has been closed.</string>
+</resources>

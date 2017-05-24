@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">A2I Sample</string>
+    <string name="show_default_survey">Show Default Survey</string>
+</resources>
