@@ -46,5 +46,5 @@ a2IHandler.startSurveyActivityForResult(this, [DEFAULT_SURVEY_CODE], [APP_NAME],
 #### Opening Dahsboard for User
 To open dashboard, call:
 ```java
-a2IHandler.startDashboardActivity(this, [DEFAULT_SURVEY_CODE], [APP_NAME]);
+a2IHandler.startDashboardActivity(this, [DEFAULT_DASHBOARD_CODE], [APP_NAME]);
 ```
