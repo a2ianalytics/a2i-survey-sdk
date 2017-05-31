@@ -18,7 +18,7 @@ Note: do not add the jitpack.io repository under `buildscript`
 
 ```
 dependencies {
-    compile 'com.github.a2ianalytics:a2i-survey-sdk:v1.0'
+    compile 'com.github.a2ianalytics:a2i-survey-sdk:v1.0.1'
 }
 ```
 
@@ -41,4 +41,10 @@ a2IHandler.onCreate(this, [DEFAULT_SURVEY_CODE], [APP_NAME], [MESSAGE_TEXT_FOR_S
 To present a survey for the user to take, call:
 ```java
 a2IHandler.startSurveyActivityForResult(this, [DEFAULT_SURVEY_CODE], [APP_NAME], [REQUEST_CODE]);
+```
+
+#### Opening Dahsboard for User
+To open dashboard, call:
+```java
+a2IHandler.startDashboardActivity(this, [DEFAULT_SURVEY_CODE], [APP_NAME]);
 ```
