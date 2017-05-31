@@ -42,3 +42,9 @@ To present a survey for the user to take, call:
 ```java
 a2IHandler.startSurveyActivityForResult(this, [DEFAULT_SURVEY_CODE], [APP_NAME], [REQUEST_CODE]);
 ```
+
+#### Opening Dahsboard for User
+To open dashboard, call:
+```java
+a2IHandler.startDashboardActivity(this, [DEFAULT_SURVEY_CODE], [APP_NAME]);
+```
