@@ -15,8 +15,9 @@ android {
         buildConfigField "String", "ACTION_TYPE", "\"action_type=survey_done\""
         buildConfigField("String","DISPLAY_MESSAGE","\"&display_message=\"")
         buildConfigField("String","SURVEY_MSG_TYPE","\"&survey_msg_type=\"");
-
+        buildConfigField "String", "SURVEY_DASHBAORD", "\"survey/mobile_izenda_dashboard/\""
     }
+
     buildTypes {
         release {
             minifyEnabled false

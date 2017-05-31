@@ -18,8 +18,9 @@ import android.widget.Toast;
 
 public class A2I_Activity extends AppCompatActivity {
     private static final String TAG = A2I_Activity.class.getSimpleName();
-    public static final String SURVEY_CODE = "survey_code";
-    public static final String TITLE = "title";
+    private static final String SURVEY_CODE = "survey_code";
+    private static final String DASHBOARD_CODE = "dashboard_code";
+    private static final String TITLE = "title";
     private WebView a2iWebView;
     private RelativeLayout a2iRlForProgressBar;
     private RelativeLayout a2iRlForOffline;
@@ -31,6 +32,15 @@ public class A2I_Activity extends AppCompatActivity {
             intent.putExtra(A2I_Activity.TITLE, title);
         }
         activity.startActivityForResult(intent, requestCode);
+    }
+
+    public static void startActivityForDashboard(Activity activity, String dashboardCode, String title) {
+        Intent intent = new Intent(activity, A2I_Activity.class);
+        intent.putExtra(A2I_Activity.DASHBOARD_CODE, dashboardCode);
+        if (title != null) {
+            intent.putExtra(A2I_Activity.TITLE, title);
+        }
+        activity.startActivity(intent);
     }
 
     @Override
@@ -56,8 +66,14 @@ public class A2I_Activity extends AppCompatActivity {
         if (A2I_Utils.isOnline(this)) {
             a2iRlForOffline.setVisibility(View.GONE);
             a2iRlForProgressBar.setVisibility(View.VISIBLE);
-            String surveyId = getIntent().getStringExtra(SURVEY_CODE);
-            String url = BuildConfig.BASE_URL + BuildConfig.SURVEY_FUNCTION + surveyId;
+            String url = "";
+            if (getIntent().hasExtra(SURVEY_CODE)) {
+                String surveyId = getIntent().getStringExtra(SURVEY_CODE);
+                url = BuildConfig.BASE_URL + BuildConfig.SURVEY_FUNCTION + surveyId;
+            } else if (getIntent().hasExtra(DASHBOARD_CODE)) {
+                String dashboardId = getIntent().getStringExtra(DASHBOARD_CODE);
+                url = BuildConfig.BASE_URL + BuildConfig.SURVEY_DASHBAORD + dashboardId;
+            }
             Log.d(TAG, "URL : " + url);
             a2iWebView.loadUrl(url);
         } else {

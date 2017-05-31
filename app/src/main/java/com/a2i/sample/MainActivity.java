@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private static final String TAG = MainActivity.class.getSimpleName();
     private static final String DEFAULT_SURVEY_CODE = "NJXyEUf6";
     //    private static final String DEFAULT_SURVEY_CODE = "9jJUdtZy";
+    private static final String DEFAULT_DASHBOARD_CODE = "NJXyEUf6";
     private static final int REQUEST_CODE = 1;
     private A2I_Handler a2IHandler = new A2I_Handler();
 
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void initViews() {
         Button btnShowDefaultSurvey = (Button) findViewById(R.id.btnShowDefaultSurvey);
         btnShowDefaultSurvey.setOnClickListener(this);
+        findViewById(R.id.btnOpenDashboard).setOnClickListener(this);
     }
 
     @Override
@@ -37,6 +39,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (view.getId()) {
             case R.id.btnShowDefaultSurvey:
                 a2IHandler.startSurveyActivityForResult(this, DEFAULT_SURVEY_CODE, getString(R.string.app_name), REQUEST_CODE);
+                break;
+            case R.id.btnOpenDashboard:
+                a2IHandler.startDashboardActivity(this, DEFAULT_DASHBOARD_CODE, "");
                 break;
         }
     }

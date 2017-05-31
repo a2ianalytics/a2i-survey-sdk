@@ -97,4 +97,8 @@ public class A2I_Handler {
             Toast.makeText(activity, R.string.a2i_no_internet_connection, Toast.LENGTH_SHORT).show();
         }
     }
+
+    public void startDashboardActivity(Activity activity, String dashboardCode, String title) {
+        A2I_Activity.startActivityForDashboard(activity, dashboardCode, title);
+    }
 }
