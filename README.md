@@ -29,22 +29,22 @@ private A2I_Handler a2IHandler = new A2I_Handler();
 
 ### Step 4: In onCreate of activity 
 ```java
-a2IHandler.onCreate(this, [DEFAULT_SURVEY_CODE], [APP_NAME], [MESSAGE_TEXT_FOR_SURVEY_DIALOG], [REQUEST_CODE]);
+a2IHandler.onCreate(this, [DEFAULT_SURVEY_CODE], [TITLE], [MESSAGE_TEXT_FOR_SURVEY_DIALOG], [REQUEST_CODE]);
 ```
 OR
 
 ```java
-a2IHandler.onCreate(this, [DEFAULT_SURVEY_CODE], [APP_NAME], [MESSAGE_TEXT_FOR_SURVEY_DIALOG], [REQUEST_CODE], [AFTER_INSTALL_INTERVAL], [AFTER_DECLINE_INTERVAL], [AFTER_ACCEPT_INTERVAL]);
+a2IHandler.onCreate(this, [DEFAULT_SURVEY_CODE], [TITLE], [MESSAGE_TEXT_FOR_SURVEY_DIALOG], [REQUEST_CODE], [AFTER_INSTALL_INTERVAL], [AFTER_DECLINE_INTERVAL], [AFTER_ACCEPT_INTERVAL]);
 ```
 
 #### Presenting a Survey to the User
 To present a survey for the user to take, call:
 ```java
-a2IHandler.startSurveyActivityForResult(this, [DEFAULT_SURVEY_CODE], [APP_NAME], [REQUEST_CODE]);
+a2IHandler.startSurveyActivityForResult(this, [DEFAULT_SURVEY_CODE], [TITLE], [REQUEST_CODE]);
 ```
 
 #### Opening Dahsboard for User
 To open dashboard, call:
 ```java
-a2IHandler.startDashboardActivity(this, [DEFAULT_DASHBOARD_CODE], [APP_NAME]);
+a2IHandler.startDashboardActivity(this, [DEFAULT_DASHBOARD_CODE], [TITLE]);
 ```
