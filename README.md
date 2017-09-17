@@ -1,12 +1,14 @@
 # A2I Feedback SDK for Android
 
-Want to improve your product and Google play store ratings? The A2I Mobile Feedback SDK gives you all the tools you need to collect user feedback about your in-app experience.
+The A2I Mobile Feedback SDK gives you all the tools you need to collect feedback from your consumers via your app.
 
-## How It Works
 
-1. Log in to A2I and create a survey asking users what improvements they want to see and how they’d rate your app
+### How It Works
+
+1. Log in to A2I and create surveys.
 2. Integrate the survey into your mobile app using our [mobile SDK]
-3. Get product feedback in real time and prompt satisfied customers to rate you
+3. Get feedback in real time. 
+
 
 ## Steps To Integrate sdk
 ### Step 1: Add the jitpack.io repository to your main build.gradle file
@@ -51,7 +53,7 @@ To present a survey for the user to take, call:
 a2IHandler.startSurveyActivityForResult(this, [DEFAULT_SURVEY_CODE], [TITLE], [REQUEST_CODE]);
 ```
 
-#### Opening Dahsboard for User
+#### Opening Dashboard for User
 To open dashboard, call:
 ```java
 a2IHandler.startDashboardActivity(this, [DEFAULT_DASHBOARD_CODE], [TITLE]);
@@ -64,7 +66,7 @@ Please submit any issues with the SDK to us via Github issues. We strive to fix 
 *What can I use the mobile SDK for?*
 
 ###### Measure overall satisfaction
-A simple, multiple choice question can help you understand just how satisfied users are with your app. Based on their level of satisfaction, you can tailor the rest of their in-app experience. For example, if a user reports a moderate level of satisfaction, you can ask them a follow-up question to identify the problem and prioritize a solution by your development team.
+Based on surveys you've created in A2I, you can get real-time feedback from the users on your app. Based on their feedback, you can tailor the rest of their in-app experience. For example, if a user reports a moderate level of satisfaction, you can ask them a follow-up question to identify the problem and prioritize a solution.
 
 ###### Conduct real-time product research
 The best way to perform user research is to listen. A product manager can quickly find out which features a user is yearning for, and which features aren’t meeting expectations. Based on the findings, a product team can adjust roadmaps to be more responsive for their growing mobile user base and don’t have to passively wait for an app store review to see what is and isn’t working.
@@ -79,11 +81,6 @@ You can prompt the user for in-app feedback if they visit a certain part of the 
 
 ###### Passive feedback
 Many apps have a slide-out menu that allows their users to access a variety of items such as Account, About Us, or Help. At A2I, we’ve included Feedback in our slide-out menu to passively prompt users for feedback. You can incorporate this into your own app so users can provide feedback whenever they want.
-
-
-*Is the mobile SDK free?*
-
-Yes, the mobile SDK can be incorporated into your app with any A2I 
 
 
 *How can I style the survey?  How will it look on a mobile device?*
